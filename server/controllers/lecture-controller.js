@@ -4,7 +4,6 @@ const knex = require("./../db");
 //Get all available bookings by one student before deadline
 exports.getBookingLectures = async (req, res) => {
   const studentId = req.user && req.user.id;
-  
   today = moment().format("YYYY-MM-DD HH:mm:ss");
   deadline = moment(today).add(12, "hours");
   dateShown = moment(today).add(2, "weeks");
