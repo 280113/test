@@ -103,7 +103,7 @@ exports.newBooking = async (req, res) => {
   console.log(req.user);
   today = moment().format("YYYY-MM-DD HH:mm:ss");
 
-
+  console.log("test");
   knex("lecture_booking")
   
   .insert({
