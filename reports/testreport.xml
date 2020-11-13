@@ -1,0 +1,11 @@
+<testExecutions version="1">
+<file path="test/lectureTest.js">
+<testCase name="reservation test: book a seat: should return a 200 response" duration="76"/>
+</file>
+<file path="test/userTest.js">
+<testCase name="GET /api/user: should return a 200 response with the user data if the user is logged in." duration="9"/>
+<testCase name="GET /api/user: should return a 401 response when the user is not authenticated." duration="9"/>
+<testCase name="GET /api/user: should return a 401 response after the user logs out." duration="14"/>
+</file>
+</testExecutions>
+
