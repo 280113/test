@@ -10,6 +10,7 @@ const mailslurp = new MailSlurp({ apiKey });
 
 //the data we need to pass to the login method
 const userCredentials = {
+    
     email: mailSlurpAddress,
     password: "password",
 };
