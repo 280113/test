@@ -13,7 +13,7 @@ exports.getBookingLectures = async (req, res) => {
   console.log(today);
   
   console.log(deadline);
-
+  console.log("test");
   knex
     //.select(knex.raw('lecture.id, name, course, lecturer, start, end, capacity, count(*) as booked_students'))
     .select(
@@ -60,6 +60,7 @@ exports.getBookingLectures = async (req, res) => {
 
 //Get existent bookings by one student
 exports.getExistentBooking = async (req, res) => {
+  console.log("ciao");
   const studentId = req.user && req.user.id;
   const today = moment().format("YYYY-MM-DD HH:mm:ss");
   const dateShown = moment(today).add(2, "weeks");
