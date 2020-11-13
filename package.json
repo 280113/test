@@ -38,7 +38,7 @@
     "start-front": "react-scripts start",
     "start": "concurrently \"npm run start-server\" \"npm run start-front\" --kill-others --kill-others-on-fail",
     "test": "cross-env NODE_ENV=testing mocha",
-    "test-sonar-report": "cross-env NODE_ENV=testing mocha --reporter mocha-sonarqube-reporter --reporter-options output=xunit.xml",
+    "test-sonar-report": "cross-env NODE_ENV=testing mocha --reporter mocha-sonarqube-reporter --reporter-options output=reports/TEST-all.xml",
     "test-coverage": "cross-env NODE_ENV=testing nyc --reporter=lcov --reporter=text-lcov mocha test/*.js",
     "test-full-reports": "concurrently \"npm run test-sonar-report\" \"npm run test-coverage\" --kill-others --kill-others-on-fail"
   },
