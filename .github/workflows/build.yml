@@ -16,7 +16,10 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: test-full-reports
+          cmd: test-sonar-report
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test-coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
