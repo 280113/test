@@ -1,0 +1,9 @@
+<coverage version="1">
+  <file path="server/controllers/lecture-controller.js">
+    <lineToCover lineNumber="6" covered="true"/>
+    <lineToCover lineNumber="7" covered="false"/>
+  </file>
+  <file path="server/controllers/user-controller.js">
+    <lineToCover lineNumber="3" covered="true"/>
+  </file>
+</coverage>
