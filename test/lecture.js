@@ -82,6 +82,13 @@ describe("Lecture test", async () => {
                 .expect(200, {message: "Booking created."});
         });
 
+
+        it("should receive an email", async() => {
+            const inbox = (await mailslurp.getInboxes())[0];
+            mailslurp.emptyInbox(inbox.id); 
+            const email = await mailslurp.waitForLatestEmail(inbox.id);
+            expect(email.body).to.equal("test");
+        });
     });
 });
   
