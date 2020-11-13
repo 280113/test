@@ -15,10 +15,7 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: add mocha # will install mocha
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test-coverage
+          cmd: test-full-reports
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
