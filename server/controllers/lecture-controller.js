@@ -113,7 +113,6 @@ exports.newBooking = async (req, res) => {
       student_id: studentId, //idstudent
       booked_at: today, //time
     })
-  
     .then(() => {
       // Send a success message in response
       res.json({ message: `Booking created.` });
