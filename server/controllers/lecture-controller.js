@@ -103,19 +103,24 @@ exports.newBooking = async (req, res) => {
   console.log(req.user);
   today = moment().format("YYYY-MM-DD HH:mm:ss");
 
+
   knex("lecture_booking")
-    .insert({
+  
+  .insert({
       // insert new record
       lecture_id: req.params.lectureId,
       student_id: studentId, //idstudent
       booked_at: today, //time
     })
+  
     .then(() => {
       // Send a success message in response
       res.json({ message: `Booking created.` });
     })
+  
     .catch((err) => {
       // Send a error message in response
+  
       res.json({ message: `There was an error creating the booking` });
     });
 };
