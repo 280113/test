@@ -1,0 +1,87 @@
+{
+  "name": "queue",
+  "version": "1.0.0",
+  "description": "App to book university lessons using React, Express and SQLite.",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "app",
+    "queue",
+    "express",
+    "javascript",
+    "react",
+    "sqlite",
+    "typescript"
+  ],
+  "browserslist": [
+    "last 7 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "engines": {
+    "node": ">=10.0",
+    "npm": ">=6.0",
+    "yarn": ">=1.1.0"
+  },
+  "main": "src/index.tsx",
+  "proxy": "http://localhost:4001/api",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "node ./buildScript",
+    "build-front": "react-scripts build",
+    "eject": "react-scripts eject",
+    "format": "prettier --write .",
+    "start-server": "nodemon server/server.js --watch server/*",
+    "start-front": "react-scripts start",
+    "start": "concurrently \"npm run start-server\" \"npm run start-front\" --kill-others --kill-others-on-fail",
+    "test": "cross-env NODE_ENV=testing mocha",
+    "test-sonar-report": "cross-env NODE_ENV=testing mocha --reporter mocha-sonarqube-reporter --reporter-options output=xunit.xml",
+    "test-coverage": "cross-env NODE_ENV=testing nyc --reporter=lcov --reporter=text-lcov mocha test/*.js",
+    "test-full-reports": "concurrently \"npm run test-sonar-report\" \"npm run test-coverage\" --kill-others --kill-others-on-fail"
+  },
+  "dependencies": {
+    "axios": "0.19.2",
+    "bcrypt": "^5.0.0",
+    "body-parser": "1.19.0",
+    "bootstrap": "^4.5.3",
+    "compression": "1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "4.17.1",
+    "express-jwt": "^6.0.0",
+    "helmet": "3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "0.20.13",
+    "mailslurp-client": "^9.0.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "prettier": "^2.1.2",
+    "react": "16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "16.13.1",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.6",
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.6",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "concurrently": "5.1.0",
+    "mocha": "^8.2.0",
+    "mocha-sonarqube-reporter": "^1.0.2",
+    "nodemon": "2.0.3",
+    "nyc": "^15.1.0",
+    "react-scripts": "3.4.1",
+    "sqlite3": "4.1.1",
+    "superagent": "^6.1.0",
+    "supertest": "^6.0.1",
+    "typescript": "3.8.3"
+  }
+}
