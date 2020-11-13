@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">84.62% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/26</span>
+                <span class='fraction'>22/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">71.43% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>5/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">84.62% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/26</span>
+                <span class='fraction'>22/26</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -138,13 +138,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -154,28 +154,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,7 +193,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Import database
 const knex = require("./../db");
@@ -206,14 +206,14 @@ const jwtSecret = process.env.JWT_SECRET;
 const expireTime = 30 * 60;
 &nbsp;
 // Get user data.
-exports.get = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const userId = <span class="cstat-no" title="statement not covered" >req.user &amp;&amp; req.user.id;</span>
-<span class="cstat-no" title="statement not covered" >  knex</span>
+exports.get = async (req, res) =&gt; {
+  const userId = req.user &amp;&amp; req.user.id;
+  knex
     .select("id", "name", "surname", "email", "role")
     .from("user")
     .where("id", userId)
-    .then(<span class="fstat-no" title="function not covered" >(q</span>ueryResults) =&gt; {
-<span class="cstat-no" title="statement not covered" >      res.json(queryResults[0]);</span>
+    .then((queryResults) =&gt; {
+      res.json(queryResults[0]);
     })
     .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
 <span class="cstat-no" title="statement not covered" >      res.json({</span>
@@ -222,29 +222,29 @@ exports.get = <span class="fstat-no" title="function not covered" >as</span>ync 
     });
 };
 &nbsp;
-exports.login = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const { email, password } = <span class="cstat-no" title="statement not covered" >req.body;</span>
-<span class="cstat-no" title="statement not covered" >  console.log(password);</span>
-<span class="cstat-no" title="statement not covered" >  knex</span>
+exports.login = async (req, res) =&gt; {
+  const { email, password } = req.body;
+  console.log(password);
+  knex
     .select("id", "name", "surname", "email", "password_hash", "role")
     .from("user")
     .where("email", email)
-    .then(<span class="fstat-no" title="function not covered" >(q</span>ueryResults) =&gt; {
-<span class="cstat-no" title="statement not covered" >      if (</span>
+    .then((queryResults) =&gt; {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (
         queryResults.length == 1 &amp;&amp;
         bcrypt.compareSync(password, queryResults[0].password_hash)
       ) {
-        const userDetails = <span class="cstat-no" title="statement not covered" >queryResults[0];</span>
-        const token = <span class="cstat-no" title="statement not covered" >jsonwebtoken.sign({ id: userDetails.id }, jwtSecret, {</span>
+        const userDetails = queryResults[0];
+        const token = jsonwebtoken.sign({ id: userDetails.id }, jwtSecret, {
           expiresIn: expireTime,
         });
-<span class="cstat-no" title="statement not covered" >        res.cookie("token", token, {</span>
+        res.cookie("token", token, {
           httpOnly: true,
           sameSite: true,
           maxAge: 1000 * expireTime,
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        res.json({</span>
+        res.json({
           id: userDetails.id,
           name: userDetails.name,
           surname: userDetails.surname,
@@ -261,8 +261,8 @@ exports.login = <span class="fstat-no" title="function not covered" >as</span>yn
     });
 };
 &nbsp;
-exports.logout = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-<span class="cstat-no" title="statement not covered" >  res.clearCookie("token").end();</span>
+exports.logout = async (req, res) =&gt; {
+  res.clearCookie("token").end();
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -271,7 +271,7 @@ exports.logout = <span class="fstat-no" title="function not covered" >as</span>y
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Nov 13 2020 19:28:11 GMT+0100 (Ora standard dell’Europa centrale)
+                at Fri Nov 13 2020 20:06:15 GMT+0100 (Ora standard dell’Europa centrale)
             </div>
         </div>
         <script src="../../prettify.js"></script>

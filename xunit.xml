@@ -1,15 +1,7 @@
 <testExecutions version="1">
-<file path="test\lecture.js">
-<testCase name="reservation test: book a seat: should return a 200 response" duration="79"/>
-<testCase name="reservation test: should receive an email" duration="2029">
-<failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (D:\projects\test\test\lecture.js)"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (D:\projects\test\test\lecture.js)
-    at listOnTimeout (node:internal/timers:555:17)
-    at processTimers (node:internal/timers:498:7)]]></failure>
-</testCase>
-</file>
 <file path="test\user.js">
-<testCase name="GET /api/user: should return a 200 response with the user data if the user is logged in." duration="12"/>
-<testCase name="GET /api/user: should return a 401 response when the user is not authenticated." duration="10"/>
-<testCase name="GET /api/user: should return a 401 response after the user logs out." duration="18"/>
+<testCase name="GET /api/user: should return a 200 response with the user data if the user is logged in." duration="24"/>
+<testCase name="GET /api/user: should return a 401 response when the user is not authenticated." duration="24"/>
+<testCase name="GET /api/user: should return a 401 response after the user logs out." duration="27"/>
 </file>
 </testExecutions>
