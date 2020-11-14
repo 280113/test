@@ -87,6 +87,7 @@ describe("Lecture test", async () => {
             mailslurp.emptyInbox(inbox.id); 
             const email = await mailslurp.waitForLatestEmail(inbox.id);
             expect(email.body).to.equal("test");
+            
         });
     });
 });
