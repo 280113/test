@@ -111,6 +111,7 @@ exports.newBooking = async (req, res) => {
       res.json({ message: `Booking created.` });
     })
     .catch((err) => {
+      
       // Send a error message in response
       res.json({ message: `There was an error creating the booking` });
     });
